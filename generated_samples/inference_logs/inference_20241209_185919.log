@@ -1,0 +1,4 @@
+2024-12-09 18:59:19,245 - INFO - Loading model from runs/melodyforge/checkpoints/checkpoint_epoch_3.pt
+2024-12-09 18:59:22,145 - INFO - Loaded dataset from cache with 108082 sequences
+2024-12-09 18:59:26,392 - INFO - Generating sample 1/5
+2024-12-09 18:59:38,001 - ERROR - Error during generation: 'PosixPath' object has no attribute 'write'

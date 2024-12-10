@@ -1,0 +1,12 @@
+2024-12-09 19:00:31,507 - INFO - Loading model from runs/melodyforge/checkpoints/checkpoint_epoch_3.pt
+2024-12-09 19:00:34,431 - INFO - Loaded dataset from cache with 108082 sequences
+2024-12-09 19:00:38,697 - INFO - Generating sample 1/5
+2024-12-09 19:00:50,307 - INFO - Saved generated MIDI to generated_samples/generated_1.mid
+2024-12-09 19:00:50,307 - INFO - Generating sample 2/5
+2024-12-09 19:00:58,526 - INFO - Saved generated MIDI to generated_samples/generated_2.mid
+2024-12-09 19:00:58,526 - INFO - Generating sample 3/5
+2024-12-09 19:01:07,742 - INFO - Saved generated MIDI to generated_samples/generated_3.mid
+2024-12-09 19:01:07,742 - INFO - Generating sample 4/5
+2024-12-09 19:01:16,948 - INFO - Saved generated MIDI to generated_samples/generated_4.mid
+2024-12-09 19:01:16,948 - INFO - Generating sample 5/5
+2024-12-09 19:01:26,163 - INFO - Saved generated MIDI to generated_samples/generated_5.mid
