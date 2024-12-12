@@ -100,7 +100,7 @@ def generate_and_analyze():
         'num_layers': 6,
     }
     
-    checkpoint_path = "runs/melodyforge/checkpoints/checkpoint_epoch_5.pt"
+    checkpoint_path = "runs/melodyforge/checkpoints/checkpoint_epoch_1.pt"
     
     setup_logging()
     
