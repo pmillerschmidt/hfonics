@@ -18,13 +18,12 @@ def setup_logging():
 def load_model(checkpoint_path, config, device='cpu'):
     """Load the trained model from checkpoint"""
     logging.info(f'Loading model from {checkpoint_path}')
-    
+    # Only load vocabulary info
     dataset = MIDIDataset(
         midi_folder=config['data_dir'],
         sequence_length=config['sequence_length'],
         cache_dir=config['cache_dir']
     )
-    
     model = MusicTransformer(
         vocab_size=len(dataset.token_to_id),
         d_model=config['d_model'],
@@ -35,7 +34,6 @@ def load_model(checkpoint_path, config, device='cpu'):
     checkpoint = torch.load(checkpoint_path, map_location=device)
     model.load_state_dict(checkpoint['model_state_dict'])
     model.eval()
-    
     return model, dataset
 
 def print_midi_events(sequence, dataset):
@@ -100,7 +98,7 @@ def generate_and_analyze():
         'num_layers': 6,
     }
     
-    checkpoint_path = "runs/melodyforge/checkpoints/checkpoint_epoch_1.pt"
+    checkpoint_path = "runs/melodyforge/checkpoints/checkpoint_epoch_5.pt"
     
     setup_logging()
     
