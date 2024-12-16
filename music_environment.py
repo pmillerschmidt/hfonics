@@ -1,7 +1,5 @@
 import torch
-import numpy as np
-from typing import Tuple, Dict
-from model.transformer import MusicTransformer
+from model import MusicTransformer
 
 class MusicEnvironment:
     def __init__(self,
@@ -23,11 +21,8 @@ class MusicEnvironment:
             base_logits = self.base_model(self.current_sequence)
             modified_logits = base_logits + action
             token = torch.multinomial(torch.softmax(modified_logits, dim=-1), 1)
-
         # Update sequence
         self.current_sequence[0, self.position] = token
         self.position += 1
-
         done = self.position >= self.sequence_length
-
-        return self.current_sequence, 0.0, done  # Reward will come from human feedback
+        return self.current_sequence, 0.0, done  # Reward from human feedback
